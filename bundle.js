@@ -1,25 +1,26 @@
 "use strict";
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var arr = [1, 2, 3, 4];
+var newArr = arr.map(function (item, index) {
+  return item + index;
+});
+var sum = arr.reduce(function (total, next) {
+  return total + next;
+});
+var filter = arr.filter(function (item) {
+  return item % 2 === 0;
+});
+var find = arr.find(function (item) {
+  return item == 2;
+});
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+var soma = function soma() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+  return a + b;
+};
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-alert("Alou");
-
-var Teste = /*#__PURE__*/function () {
-  function Teste() {
-    _classCallCheck(this, Teste);
-  }
-
-  _createClass(Teste, [{
-    key: "metodo",
-    value: function metodo() {}
-  }, {
-    key: "outro",
-    value: function outro() {}
-  }]);
-
-  return Teste;
-}();
+console.log(find);
+console.log(filter);
+console.log(sum);
+console.log(newArr);
